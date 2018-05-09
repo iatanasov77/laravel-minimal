@@ -1,0 +1,25 @@
+{
+	"name": "nice-admin",
+	"description": "ICover Theme",
+	"dependencies": {
+		"BootstrapAdmin": "https://github.com/herususanto/BootstrapAdmin.git",
+		"jquery": "^2.0",
+		"bootstrap": "^3.0",
+		"elegant-icons": "master",
+		"fontawesome": "4.2.0",
+		"html5shiv": "^3.7",
+		"respond": "^1.4",
+		"jquery.scrollTo": "^2.1",
+		"jquery.nicescroll": "^3.6"
+	},
+	"moduleType": [
+		"amd",
+		"globals",
+		"node"
+	],
+	"authors": [
+		"Ivan Atanasov <i.atanasov77@gmail.com>"
+	],
+	"license": "MIT",
+	"private": true
+}

@@ -1,0 +1,15 @@
+/.env
+/.settings/
+/.buildpath
+/.project
+/.dbeaver-data-sources.xml
+/.vagrant/
+/composer.lock
+/vendor/
+/storage/
+/public/assets/
+/resources/themes
+npm-debug.log
+/node_modules/
+/deployment_production.log
+/temp/
