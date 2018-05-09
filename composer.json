@@ -1,0 +1,45 @@
+{
+	"name" : "iatanasov/laravel-framework",
+	"description" : "The Laravel Framework.",
+	"keywords" : [
+		"framework",
+		"laravel",
+		"iatanasov"
+	],
+	"license" : "MIT",
+	"type" : "project",
+	"require" : {
+		"php": ">=7.0",
+		"doctrine/dbal": "^2.6.0",
+		"laravel/framework": "^5.5",
+		"laravelcollective/html": "^5.5"
+	},
+	"require-dev" : {
+		"filp/whoops" : "~2.0",
+		"fzaninotto/faker" : "~1.4",
+		"laravel/tinker": "^1.0@dev"
+	},
+	"autoload" : {
+		"files" : [
+			"src/Core/Helpers/Helpers.php"
+		],
+		"psr-4" : {
+			"App\\" : "src/App/",
+			"Icover\\Core\\" : "src/Core/"
+		}
+	},
+	
+	"scripts" : {
+		"post-autoload-dump" : [
+			"Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+			"@php artisan package:discover"
+		]
+	},
+	"config" : {
+		"preferred-install" : "dist",
+		"sort-packages" : true,
+		"optimize-autoloader" : true,
+		"secure-http": false
+	},
+	"minimum-stability" : "dev"
+}
