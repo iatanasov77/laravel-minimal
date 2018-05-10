@@ -12,8 +12,8 @@
 VAGRANTFILE_API_VERSION	= '2' 
 VAGRANT_BOX       		= "ubuntu/artful64"
 
-MASHINE_NAME			= "iCover_IAtanasov"
-HOSTNAME				= "iatanasov.icover"
+MASHINE_NAME			= "LaravelMinimal"
+HOSTNAME				= "laravel-minimal.lh"
 PUBLIC_IP				= '10.3.3.2'
 VBOX_MACHINE_MEMORY		= '1024'			# In Kbytes
 
@@ -81,13 +81,13 @@ Vagrant.configure( VAGRANTFILE_API_VERSION ) do |vagrant_config|
 		# and Laravel rewrite rules not working
 		# The next is a hard fix for this.
 		$workaround = <<-SCRIPT
-sed "$(grep -n -m1 "AllowOverride None" /etc/apache2/sites-available/25-iatanasov.icover.conf |cut -f1 -d:)s/.*/AllowOverride All/" /etc/apache2/sites-available/25-iatanasov.icover.conf > /etc/apache2/sites-available/25-iatanasov.icover.conf.FIXED
-cp -f /etc/apache2/sites-available/25-iatanasov.icover.conf.FIXED /etc/apache2/sites-available/25-iatanasov.icover.conf
-rm /etc/apache2/sites-available/25-iatanasov.icover.conf.FIXED
+sed "$(grep -n -m1 "AllowOverride None" /etc/apache2/sites-available/25-laravel-minimal.lh.conf |cut -f1 -d:)s/.*/AllowOverride All/" /etc/apache2/sites-available/25-laravel-minimal.lh.conf > /etc/apache2/sites-available/25-laravel-minimal.lh.conf.FIXED
+cp -f /etc/apache2/sites-available/25-laravel-minimal.lh.conf.FIXED /etc/apache2/sites-available/25-laravel-minimal.lh.conf
+rm /etc/apache2/sites-available/25-laravel-minimal.lh.conf.FIXED
 service apache2 restart 
 echo "####################################################################"
 echo "# DONE!!!"
-echo "# Now you can open 'http://iatanasov.icover' in your browser"
+echo "# Now you can open 'http://laravel-minimal.lh' in your browser"
 echo "# user: nikola@abv.bg"
 echo "# pass: 123456"
 echo "####################################################################"
