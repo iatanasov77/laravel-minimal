@@ -13,3 +13,8 @@ npm-debug.log
 /node_modules/
 /deployment_production.log
 /temp/
+/*.log
+/Vagrant/puppet/modules
+/Vagrant/puppet/Puppetfile.lock
+/Vagrant/puppet/.librarian
+/Vagrant/puppet/.tmp
