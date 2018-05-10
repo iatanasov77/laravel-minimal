@@ -58,7 +58,7 @@ Vagrant.configure( VAGRANTFILE_API_VERSION ) do |vagrant_config|
 		config.vm.provision "shell", path: "Vagrant/provision/init.sh"
 		config.vm.provision "shell", path: "Vagrant/provision/make_swap.sh"
 		config.vm.provision "shell", path: "Vagrant/provision/install_puppet.sh"
-		#config.vm.provision "shell", path: "Vagrant/provision/install_puppet_modules.sh"
+		config.vm.provision "shell", path: "Vagrant/provision/install_puppet_modules.sh"
     
 	    # Run puppet provisioner
 	    config.vm.provision :puppet do |puppet|
